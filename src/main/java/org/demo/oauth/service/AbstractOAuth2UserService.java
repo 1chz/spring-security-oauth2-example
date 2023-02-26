@@ -2,14 +2,14 @@ package org.demo.oauth.service;
 
 import java.util.List;
 import lombok.RequiredArgsConstructor;
-import org.demo.oauth.entity.Authorities;
-import org.demo.oauth.entity.Users;
 import org.demo.oauth.model.GitHubProvidersUser;
 import org.demo.oauth.model.GoogleProvidersUser;
 import org.demo.oauth.model.KakaoProvidersUser;
 import org.demo.oauth.model.NaverProvidersUser;
 import org.demo.oauth.model.ProvidersUser;
+import org.demo.oauth.repository.Authorities;
 import org.demo.oauth.repository.AuthoritiesRepository;
+import org.demo.oauth.repository.Users;
 import org.demo.oauth.repository.UsersRepository;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.oauth2.client.registration.ClientRegistration;

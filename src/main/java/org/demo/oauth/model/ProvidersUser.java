@@ -2,7 +2,7 @@ package org.demo.oauth.model;
 
 import java.util.List;
 import java.util.Map;
-import org.demo.oauth.entity.Authorities;
+import org.demo.oauth.repository.Authorities;
 
 public interface ProvidersUser {
     String getProvider();

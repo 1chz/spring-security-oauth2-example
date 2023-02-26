@@ -1,4 +1,4 @@
-package org.demo.oauth.entity;
+package org.demo.oauth.repository;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
