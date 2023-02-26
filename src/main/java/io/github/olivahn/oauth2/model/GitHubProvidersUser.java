@@ -1,4 +1,4 @@
-package org.demo.oauth.model;
+package io.github.olivahn.oauth2.model;
 
 import org.springframework.security.oauth2.client.registration.ClientRegistration;
 import org.springframework.security.oauth2.core.user.OAuth2User;

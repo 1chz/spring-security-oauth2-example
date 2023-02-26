@@ -1,16 +1,16 @@
-package org.demo.oauth.service;
+package io.github.olivahn.oauth2.service;
 
+import io.github.olivahn.oauth2.model.GitHubProvidersUser;
+import io.github.olivahn.oauth2.model.GoogleProvidersUser;
+import io.github.olivahn.oauth2.model.KakaoProvidersUser;
+import io.github.olivahn.oauth2.model.NaverProvidersUser;
+import io.github.olivahn.oauth2.model.ProvidersUser;
+import io.github.olivahn.oauth2.repository.Authorities;
+import io.github.olivahn.oauth2.repository.AuthoritiesRepository;
+import io.github.olivahn.oauth2.repository.Users;
+import io.github.olivahn.oauth2.repository.UsersRepository;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
-import org.demo.oauth.model.GitHubProvidersUser;
-import org.demo.oauth.model.GoogleProvidersUser;
-import org.demo.oauth.model.KakaoProvidersUser;
-import org.demo.oauth.model.NaverProvidersUser;
-import org.demo.oauth.model.ProvidersUser;
-import org.demo.oauth.repository.Authorities;
-import org.demo.oauth.repository.AuthoritiesRepository;
-import org.demo.oauth.repository.Users;
-import org.demo.oauth.repository.UsersRepository;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.oauth2.client.registration.ClientRegistration;
 import org.springframework.security.oauth2.core.user.OAuth2User;

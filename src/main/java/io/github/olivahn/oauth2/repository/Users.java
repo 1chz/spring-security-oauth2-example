@@ -1,4 +1,4 @@
-package org.demo.oauth.repository;
+package io.github.olivahn.oauth2.repository;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

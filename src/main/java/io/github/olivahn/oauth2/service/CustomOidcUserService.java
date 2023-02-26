@@ -1,8 +1,8 @@
-package org.demo.oauth.service;
+package io.github.olivahn.oauth2.service;
 
-import org.demo.oauth.model.ProvidersUser;
-import org.demo.oauth.repository.AuthoritiesRepository;
-import org.demo.oauth.repository.UsersRepository;
+import io.github.olivahn.oauth2.model.ProvidersUser;
+import io.github.olivahn.oauth2.repository.AuthoritiesRepository;
+import io.github.olivahn.oauth2.repository.UsersRepository;
 import org.springframework.security.oauth2.client.oidc.userinfo.OidcUserRequest;
 import org.springframework.security.oauth2.client.oidc.userinfo.OidcUserService;
 import org.springframework.security.oauth2.client.registration.ClientRegistration;

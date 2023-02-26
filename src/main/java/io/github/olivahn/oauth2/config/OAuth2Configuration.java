@@ -1,7 +1,7 @@
-package org.demo.oauth.config;
+package io.github.olivahn.oauth2.config;
 
-import org.demo.oauth.service.CustomOAuth2UserService;
-import org.demo.oauth.service.CustomOidcUserService;
+import io.github.olivahn.oauth2.service.CustomOAuth2UserService;
+import io.github.olivahn.oauth2.service.CustomOidcUserService;
 import org.springframework.boot.autoconfigure.security.servlet.PathRequest;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

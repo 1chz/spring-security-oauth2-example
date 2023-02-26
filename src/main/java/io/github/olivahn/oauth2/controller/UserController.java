@@ -1,4 +1,4 @@
-package org.demo.oauth.controller;
+package io.github.olivahn.oauth2.controller;
 
 import java.util.List;
 import org.springframework.security.core.Authentication;

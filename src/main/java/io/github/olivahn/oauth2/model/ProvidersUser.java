@@ -1,8 +1,8 @@
-package org.demo.oauth.model;
+package io.github.olivahn.oauth2.model;
 
+import io.github.olivahn.oauth2.repository.Authorities;
 import java.util.List;
 import java.util.Map;
-import org.demo.oauth.repository.Authorities;
 
 public interface ProvidersUser {
     String getProvider();

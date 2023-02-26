@@ -1,4 +1,4 @@
-package org.demo.oauth;
+package io.github.olivahn.oauth2;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
