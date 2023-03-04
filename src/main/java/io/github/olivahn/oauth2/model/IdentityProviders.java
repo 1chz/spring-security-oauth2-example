@@ -13,6 +13,6 @@ public enum IdentityProviders {
         return Arrays.stream(values())
                 .filter(it -> it.name().equalsIgnoreCase(idp))
                 .findFirst()
-                .orElseThrow(() -> new IllegalArgumentException("Invalid OAuth2 Provider"));
+                .orElseThrow(() -> new IllegalArgumentException("'%s' is invalid OAuth2 Provider".formatted(idp)));
     }
 }
