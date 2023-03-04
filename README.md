@@ -2,7 +2,7 @@
 
 이 저장소는 `Spring Security OAuth2 Client 모듈`을 사용하여 클라이언트와 서버 간에 인증 및 권한 부여를 설정하는 방법을 보여주는 간단한 예제입니다.
 
-<img width="1570" alt="image" src="https://user-images.githubusercontent.com/71188307/222906211-09b7f2eb-5fa2-4b5c-86b4-b217aeff5a29.png">
+<img width="1539" alt="image" src="https://user-images.githubusercontent.com/71188307/222906425-013562e6-c379-4d8c-9ca6-4388dc5f8732.png">
 
 ## 요구 사항
 
