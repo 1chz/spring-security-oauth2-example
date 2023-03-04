@@ -11,9 +11,9 @@ spring:
             client-id: ${GOOGLE_CLIENT_ID}
             client-secret: ${GOOGLE_CLIENT_SECRET}
 
-          #          apple:
-          #            client-id: ${APPLE_CLIENT_ID}
-          #            client-secret: ${APPLE_CLIENT_SECRET}
+          apple:
+            client-id: ${APPLE_CLIENT_ID}
+            client-secret: ${APPLE_CLIENT_SECRET}
 
           naver:
             client-name: Naver
@@ -32,10 +32,10 @@ spring:
             scope: [ openid, profile_nickname, profile_image, account_email ]
 
         provider:
-          #          apple:
-          #            authorization-uri: https://appleid.apple.com/auth/authorize?response_mode=form_post
-          #            token-uri: https://appleid.apple.com/auth/token
-          #            jwk-set-uri: https://appleid.apple.com/auth/keys
+          apple:
+            authorization-uri: https://appleid.apple.com/auth/authorize?response_mode=form_post
+            token-uri: https://appleid.apple.com/auth/token
+            jwk-set-uri: https://appleid.apple.com/auth/keys
 
           naver:
             authorization-uri: https://nid.naver.com/oauth2.0/authorize

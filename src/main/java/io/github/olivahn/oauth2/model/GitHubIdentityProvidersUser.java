@@ -1,11 +1,10 @@
 package io.github.olivahn.oauth2.model;
 
-import org.springframework.security.oauth2.client.registration.ClientRegistration;
 import org.springframework.security.oauth2.core.user.OAuth2User;
 
-public class GitHubProvidersUser extends AbstractProvidersUser {
-    public GitHubProvidersUser(OAuth2User oAuth2User, ClientRegistration clientRegistration) {
-        super(oAuth2User, clientRegistration, oAuth2User.getAttributes());
+public class GitHubIdentityProvidersUser extends AbstractIdentityProvidersUser {
+    public GitHubIdentityProvidersUser(OAuth2User oAuth2User, String clientRegistrationId) {
+        super(oAuth2User, clientRegistrationId, oAuth2User.getAttributes());
     }
 
     @Override

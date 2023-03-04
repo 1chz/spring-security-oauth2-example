@@ -1,11 +1,10 @@
 package io.github.olivahn.oauth2.model;
 
-import org.springframework.security.oauth2.client.registration.ClientRegistration;
 import org.springframework.security.oauth2.core.user.OAuth2User;
 
-public class GoogleProvidersUser extends AbstractProvidersUser {
-    public GoogleProvidersUser(OAuth2User oAuth2User, ClientRegistration clientRegistration) {
-        super(oAuth2User, clientRegistration, oAuth2User.getAttributes());
+public class GoogleIdentityProvidersUser extends AbstractIdentityProvidersUser {
+    public GoogleIdentityProvidersUser(OAuth2User oAuth2User, String clientRegistrationId) {
+        super(oAuth2User, clientRegistrationId, oAuth2User.getAttributes());
     }
 
     @Override

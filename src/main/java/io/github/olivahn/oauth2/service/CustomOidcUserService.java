@@ -1,6 +1,6 @@
 package io.github.olivahn.oauth2.service;
 
-import io.github.olivahn.oauth2.model.ProvidersUser;
+import io.github.olivahn.oauth2.model.IdentityProvidersUser;
 import io.github.olivahn.oauth2.repository.AuthoritiesRepository;
 import io.github.olivahn.oauth2.repository.UsersRepository;
 import org.springframework.security.oauth2.client.oidc.userinfo.OidcUserRequest;
@@ -23,9 +23,10 @@ public class CustomOidcUserService extends AbstractOAuth2UserService implements 
 
         OidcUser oidcUser = oidcUserService.loadUser(userRequest);
         ClientRegistration clientRegistration = userRequest.getClientRegistration();
+        String registrationId = clientRegistration.getRegistrationId();
 
-        ProvidersUser providersUser = super.providerUser(clientRegistration, oidcUser);
-        super.register(providersUser);
+        IdentityProvidersUser identityProvidersUser = IdentityProvidersUser.from(registrationId, oidcUser);
+        super.registerAsMember(identityProvidersUser);
 
         return oidcUser;
     }

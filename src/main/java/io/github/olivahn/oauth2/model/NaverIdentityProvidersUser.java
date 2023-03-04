@@ -1,13 +1,12 @@
 package io.github.olivahn.oauth2.model;
 
 import java.util.Map;
-import org.springframework.security.oauth2.client.registration.ClientRegistration;
 import org.springframework.security.oauth2.core.user.OAuth2User;
 
-public class NaverProvidersUser extends AbstractProvidersUser {
+public class NaverIdentityProvidersUser extends AbstractIdentityProvidersUser {
     @SuppressWarnings("unchecked")
-    public NaverProvidersUser(OAuth2User oAuth2User, ClientRegistration clientRegistration) {
-        super(oAuth2User, clientRegistration, (Map<String, Object>) oAuth2User.getAttributes().get("response"));
+    public NaverIdentityProvidersUser(OAuth2User oAuth2User, String clientRegistrationId) {
+        super(oAuth2User, clientRegistrationId, (Map<String, Object>) oAuth2User.getAttributes().get("response"));
     }
 
     @Override
