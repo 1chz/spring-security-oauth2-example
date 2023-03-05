@@ -1,7 +1,7 @@
-package io.github.olivahn.oauth2.config;
+package io.github.shirohoo.oauth2.config;
 
-import static io.github.olivahn.oauth2.config.HttpCookieOAuth2AuthorizationRequest.REDIRECT_URI;
-import io.github.olivahn.oauth2.model.OAuth2ProvidersUser;
+import static io.github.shirohoo.oauth2.config.HttpCookieOAuth2AuthorizationRequest.REDIRECT_URI;
+import io.github.shirohoo.oauth2.model.OAuth2ProvidersUser;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;

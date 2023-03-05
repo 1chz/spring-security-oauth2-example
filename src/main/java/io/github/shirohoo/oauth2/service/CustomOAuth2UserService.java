@@ -1,8 +1,8 @@
-package io.github.olivahn.oauth2.service;
+package io.github.shirohoo.oauth2.service;
 
-import io.github.olivahn.oauth2.model.OAuth2ProvidersUser;
-import io.github.olivahn.oauth2.repository.AuthoritiesRepository;
-import io.github.olivahn.oauth2.repository.UsersRepository;
+import io.github.shirohoo.oauth2.model.OAuth2ProvidersUser;
+import io.github.shirohoo.oauth2.repository.AuthoritiesRepository;
+import io.github.shirohoo.oauth2.repository.UsersRepository;
 import org.springframework.security.oauth2.client.registration.ClientRegistration;
 import org.springframework.security.oauth2.client.userinfo.DefaultOAuth2UserService;
 import org.springframework.security.oauth2.client.userinfo.OAuth2UserRequest;

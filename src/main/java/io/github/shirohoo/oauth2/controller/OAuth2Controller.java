@@ -1,4 +1,4 @@
-package io.github.olivahn.oauth2.controller;
+package io.github.shirohoo.oauth2.controller;
 
 import java.util.Map;
 import org.springframework.security.core.Authentication;

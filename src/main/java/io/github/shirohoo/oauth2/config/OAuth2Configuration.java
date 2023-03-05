@@ -1,4 +1,4 @@
-package io.github.olivahn.oauth2.config;
+package io.github.shirohoo.oauth2.config;
 
 import com.nimbusds.jose.jwk.JWK;
 import com.nimbusds.jose.jwk.JWKSet;
@@ -6,8 +6,8 @@ import com.nimbusds.jose.jwk.RSAKey;
 import com.nimbusds.jose.jwk.source.ImmutableJWKSet;
 import com.nimbusds.jose.jwk.source.JWKSource;
 import com.nimbusds.jose.proc.SecurityContext;
-import io.github.olivahn.oauth2.service.CustomOAuth2UserService;
-import io.github.olivahn.oauth2.service.CustomOidcUserService;
+import io.github.shirohoo.oauth2.service.CustomOAuth2UserService;
+import io.github.shirohoo.oauth2.service.CustomOidcUserService;
 import java.security.interfaces.RSAPrivateKey;
 import java.security.interfaces.RSAPublicKey;
 import org.springframework.beans.factory.annotation.Value;

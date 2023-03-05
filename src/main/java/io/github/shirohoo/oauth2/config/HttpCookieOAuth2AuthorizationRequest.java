@@ -1,4 +1,4 @@
-package io.github.olivahn.oauth2.config;
+package io.github.shirohoo.oauth2.config;
 
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;

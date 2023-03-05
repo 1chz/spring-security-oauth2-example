@@ -1,4 +1,4 @@
-package io.github.olivahn.oauth2.repository;
+package io.github.shirohoo.oauth2.repository;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

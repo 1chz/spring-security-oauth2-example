@@ -1,4 +1,4 @@
-package io.github.olivahn.oauth2.model;
+package io.github.shirohoo.oauth2.model;
 
 import java.util.Map;
 import org.springframework.security.oauth2.core.user.OAuth2User;

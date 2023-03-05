@@ -1,10 +1,10 @@
-package io.github.olivahn.oauth2.service;
+package io.github.shirohoo.oauth2.service;
 
-import io.github.olivahn.oauth2.model.OAuth2ProvidersUser;
-import io.github.olivahn.oauth2.repository.Authorities;
-import io.github.olivahn.oauth2.repository.AuthoritiesRepository;
-import io.github.olivahn.oauth2.repository.Users;
-import io.github.olivahn.oauth2.repository.UsersRepository;
+import io.github.shirohoo.oauth2.model.OAuth2ProvidersUser;
+import io.github.shirohoo.oauth2.repository.Authorities;
+import io.github.shirohoo.oauth2.repository.AuthoritiesRepository;
+import io.github.shirohoo.oauth2.repository.Users;
+import io.github.shirohoo.oauth2.repository.UsersRepository;
 import java.util.List;
 import org.springframework.transaction.annotation.Transactional;
 
