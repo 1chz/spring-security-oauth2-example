@@ -1,7 +1,7 @@
 package io.github.olivahn.oauth2.config;
 
 import static io.github.olivahn.oauth2.config.HttpCookieOAuth2AuthorizationRequest.REDIRECT_URI;
-import io.github.olivahn.oauth2.model.IdentityProvidersUser;
+import io.github.olivahn.oauth2.model.OAuth2ProvidersUser;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletRequest;
@@ -20,7 +20,7 @@ import org.springframework.security.oauth2.jwt.JwtEncoderParameters;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 import org.springframework.web.util.UriComponentsBuilder;
 
-public class OAuth2LoginSuccessHandler implements AuthenticationSuccessHandler {
+final class OAuth2LoginSuccessHandler implements AuthenticationSuccessHandler {
     private static final int ACCESS_TOKEN_EXPIRY_SECONDS = 1_800;
 
     private final JwtEncoder jwtEncoder;
@@ -51,7 +51,7 @@ public class OAuth2LoginSuccessHandler implements AuthenticationSuccessHandler {
                 .issuer("OAuth2 Client App")
                 .issuedAt(now)
                 .expiresAt(now.plusSeconds(ACCESS_TOKEN_EXPIRY_SECONDS))
-                .subject(IdentityProvidersUser.from(authentication).getId())
+                .subject(OAuth2ProvidersUser.from(authentication).id())
                 .claim("scope", "ROLE_USER")
                 .build()));
 

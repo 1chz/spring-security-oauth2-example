@@ -24,9 +24,9 @@ import org.springframework.security.oauth2.jwt.NimbusJwtEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
-public class OAuth2Configuration {
+class OAuth2Configuration {
     @Bean
-    public SecurityFilterChain securityFilterChain(
+    SecurityFilterChain securityFilterChain(
             HttpSecurity http,
             JwtEncoder jwtEncoder,
             CustomOAuth2UserService customOAuth2UserService,
@@ -57,12 +57,12 @@ public class OAuth2Configuration {
     }
 
     @Bean
-    public JwtDecoder jwtDecoder(@Value("${jwt.public.key}") RSAPublicKey publicKey) {
+    JwtDecoder jwtDecoder(@Value("${jwt.public.key}") RSAPublicKey publicKey) {
         return NimbusJwtDecoder.withPublicKey(publicKey).build();
     }
 
     @Bean
-    public JwtEncoder jwtEncoder(
+    JwtEncoder jwtEncoder(
             @Value("${jwt.public.key}") RSAPublicKey publicKey,
             @Value("${jwt.private.key}") RSAPrivateKey privateKey
     ) {

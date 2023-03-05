@@ -1,6 +1,6 @@
 package io.github.olivahn.oauth2.service;
 
-import io.github.olivahn.oauth2.model.IdentityProvidersUser;
+import io.github.olivahn.oauth2.model.OAuth2ProvidersUser;
 import io.github.olivahn.oauth2.repository.Authorities;
 import io.github.olivahn.oauth2.repository.AuthoritiesRepository;
 import io.github.olivahn.oauth2.repository.Users;
@@ -8,7 +8,7 @@ import io.github.olivahn.oauth2.repository.UsersRepository;
 import java.util.List;
 import org.springframework.transaction.annotation.Transactional;
 
-public abstract class AbstractOAuth2UserService {
+abstract class AbstractOAuth2UserService {
     private final UsersRepository usersRepository;
     private final AuthoritiesRepository authoritiesRepository;
 
@@ -18,16 +18,16 @@ public abstract class AbstractOAuth2UserService {
     }
 
     @Transactional
-    protected void registerAsMember(IdentityProvidersUser identityProvidersUser) {
-        if (!usersRepository.existsBySocialId(identityProvidersUser.getId())) {
+    protected void registerAsMember(OAuth2ProvidersUser OAuth2ProvidersUser) {
+        if (!usersRepository.existsBySocialId(OAuth2ProvidersUser.id())) {
             Users users = Users.builder()
-                    .socialId(identityProvidersUser.getId())
-                    .registrationId(identityProvidersUser.getProvider())
-                    .username(identityProvidersUser.getUsername())
-                    .email(identityProvidersUser.getEmail())
+                    .socialId(OAuth2ProvidersUser.id())
+                    .registrationId(OAuth2ProvidersUser.provider())
+                    .username(OAuth2ProvidersUser.username())
+                    .email(OAuth2ProvidersUser.email())
                     .build();
 
-            List<Authorities> authorities = identityProvidersUser.getAuthorities();
+            List<Authorities> authorities = OAuth2ProvidersUser.authorities();
             authorities.forEach(it -> it.setUsers(users));
             authoritiesRepository.saveAll(authorities);
         }

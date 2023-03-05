@@ -12,12 +12,11 @@ import org.springframework.util.SerializationUtils;
 
 /**
  * <p>
- * 세션 생성 전략을 SessionCreationPolicy.STATELESS로 사용하므로 기본적으로 사용되는 AuthorizationRequestRepository<OAuth2AuthorizationRequest>의 구현체인 HttpSessionOAuth2AuthorizationRequestRepository를 사용할 수 없음.
- * AuthorizationRequest의 Context를 저장하기 위해 Redis나 RDB같은 외부 저장소를 사용하거나,
- * Short Lived HTTP Cookie를 사용할 수 있는데, 비용상 Cookie가 더 적합하다고 판단하여 Cookie를 사용함.
+ * 세션 생성 전략을 SessionCreationPolicy.STATELESS로 사용하므로 기본적으로 사용되는 AuthorizationRequestRepository<OAuth2AuthorizationRequest>의 구현체인 HttpSessionOAuth2AuthorizationRequestRepository를 사용할 수 없음. AuthorizationRequest의 Context를 저장하기 위해 Redis나 RDB같은 외부 저장소를
+ * 사용하거나, Short Lived HTTP Cookie를 사용할 수 있는데, 비용상 Cookie가 더 저렴하다고 판단하여 Cookie를 사용함.
  * </p>
  */
-public class HttpCookieOAuth2AuthorizationRequest implements AuthorizationRequestRepository<OAuth2AuthorizationRequest> {
+final class HttpCookieOAuth2AuthorizationRequest implements AuthorizationRequestRepository<OAuth2AuthorizationRequest> {
     public static final String REDIRECT_URI = "redirect_uri";
 
     public static final String OAUTH2_AUTHORIZATION_REQUEST = "oauth2_authorization_request";
